@@ -8,6 +8,7 @@ import SectionLabel from '@/components/SectionLabel';
 import Stats from '@/components/Stats';
 import WorksWith from '@/components/WorksWith';
 import HeroVisual from '@/components/HeroVisual';
+import ModeTabs from '@/components/ModeTabs';
 import HeroGradientArc from '@/components/HeroGradientArc';
 import WordWorth from '@/components/WordWorth';
 
@@ -175,59 +176,12 @@ export default function Home() {
               transition={{ delay: 0.2 }}
               className="text-xl text-[#666] max-w-xl mx-auto"
             >
-              Three steps. Ten seconds. Done.
+              Three modes. One workflow. Done.
             </motion.p>
           </div>
 
-          {/* App mockup + Steps in 2 columns */}
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left - App Visual */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <HeroVisual />
-            </motion.div>
-
-            {/* Right - Steps */}
-            <div className="space-y-8">
-              {[
-                { num: '01', title: 'Record', desc: 'Hit the shortcut. Do your thing on screen. Dip captures everything.' },
-                { num: '02', title: 'Process', desc: 'AI watches your recording and understands the context instantly.' },
-                { num: '03', title: 'Paste', desc: 'Context is on your clipboard. Paste it anywhere. AI gets it.' },
-              ].map((step, i) => (
-                <motion.div
-                  key={step.num}
-                  initial={{ opacity: 0, x: 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
-                  className="flex gap-6 items-start"
-                >
-                  <span className="text-sm font-mono text-[#00b4d8] bg-[rgba(0,180,216,0.1)] px-3 py-1 rounded-full">
-                    {step.num}
-                  </span>
-                  <div>
-                    <h3 className="text-2xl font-bold mb-2">{step.title}</h3>
-                    <p className="text-[#888] leading-relaxed">{step.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
-
-              {/* Tagline */}
-              <motion.p
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                className="text-2xl md:text-3xl font-bold text-[#00b4d8] pt-4"
-              >
-                Do. Dip. Done.
-              </motion.p>
-            </div>
-          </div>
+          {/* Mode Tabs with demos and pipelines */}
+          <ModeTabs />
         </motion.div>
       </section>
 
