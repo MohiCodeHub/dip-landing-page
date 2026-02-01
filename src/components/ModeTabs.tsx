@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
-import HeroVisual from './HeroVisual';
+import DemoVideo from './DemoVideo';
 
 type Mode = 'context' | 'ask' | 'live';
 
@@ -82,7 +82,7 @@ export default function ModeTabs() {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
             >
-              <HeroVisual />
+              <DemoVideo mode={activeMode} />
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

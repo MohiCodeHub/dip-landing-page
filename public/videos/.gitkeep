@@ -1,0 +1,14 @@
+# Demo Videos Directory
+
+Place Loom MP4 demo videos here with the following names:
+- context-demo.mp4  (Context mode demo)
+- ask-demo.mp4      (Ask mode demo)
+- live-demo.mp4     (Live mode demo)
+
+Then update the VIDEO_SOURCES in src/components/DemoVideo.tsx:
+
+VIDEO_SOURCES = {
+  context: '/videos/context-demo.mp4',
+  ask: '/videos/ask-demo.mp4',
+  live: '/videos/live-demo.mp4',
+};
