@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Navigation from '@/components/Navigation';
 import GradientOrbs from '@/components/GradientOrbs';
-import WaitlistForm from '@/components/WaitlistForm';
+import DownloadButton from '@/components/DownloadButton';
 import SectionLabel from '@/components/SectionLabel';
 import Stats from '@/components/Stats';
 import WorksWith from '@/components/WorksWith';
@@ -36,7 +36,7 @@ export default function Home() {
       <Navigation />
 
       {/* Hero Section - Centered with gradient arc */}
-      <section id="waitlist" className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-24 overflow-hidden">
+      <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-24 overflow-hidden">
         {/* Gradient Arc Background */}
         <HeroGradientArc />
 
@@ -86,9 +86,9 @@ export default function Home() {
             Record once. Paste forever. AI finally gets it.
           </motion.p>
 
-          {/* Waitlist form */}
+          {/* Download button */}
           <motion.div variants={fadeInUp} className="w-full max-w-md">
-            <WaitlistForm />
+            <DownloadButton />
           </motion.div>
 
           {/* Micro-copy - removed macOS */}
@@ -291,9 +291,9 @@ export default function Home() {
             Ready to stop explaining?
           </h2>
           <p className="text-xl text-[#888] mb-12">
-            Get early access. Be first to dip.
+            Download now. Start dipping.
           </p>
-          <WaitlistForm />
+          <DownloadButton />
         </motion.div>
       </section>
 
